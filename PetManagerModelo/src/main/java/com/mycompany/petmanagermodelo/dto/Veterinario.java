@@ -7,7 +7,6 @@ public class Veterinario {
     private String telefone;
     private String especialidade;
 
-    // Getters e Setters
     public int getId() {
         return id;
     }

@@ -7,7 +7,6 @@ public class Servico {
     private double preco;
     private int duracaoMinutos;
 
-    // Getters e Setters
     public int getId() {
         return id;
     }

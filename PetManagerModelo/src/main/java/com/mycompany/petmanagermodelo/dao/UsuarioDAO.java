@@ -32,7 +32,7 @@ public class UsuarioDAO {
         return null;
     }
 
-    // Método opcional para inserir um novo usuário no banco (caso queira criar manualmente)
+    // essa parte é p inserir um novo usuário no banco 
     public static boolean salvar(Usuario u) {
         String sql = "INSERT INTO usuario (usuario, senha) VALUES (?, ?)";
         try (Connection conn = Conexao.getConnection();

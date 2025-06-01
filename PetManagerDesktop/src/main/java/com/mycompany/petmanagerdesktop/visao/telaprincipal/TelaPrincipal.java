@@ -3,6 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.mycompany.petmanagerdesktop.visao.telaprincipal;
+import  com.mycompany.petmanagerdesktop.visao.telacadastrotutor.TelaCadastroTutor;
+import  com.mycompany.petmanagerdesktop.visao.telacadastroservico.TelaCadastroServico;
+import  com.mycompany.petmanagerdesktop.visao.telacadastroeterinario.TelaCadastroVeterinario;
+import  com.mycompany.petmanagerdesktop.visao.telacadastroconsulta.TelaCadastroConsulta;
+import  com.mycompany.petmanagerdesktop.visao.telacadastroanimal.TelaCadastroAnimal;
 
 /**
  *
@@ -10,9 +15,6 @@ package com.mycompany.petmanagerdesktop.visao.telaprincipal;
  */
 public class TelaPrincipal extends javax.swing.JFrame {
 
-    /**
-     * Creates new form TelaPrincipal
-     */
     public TelaPrincipal() {
         initComponents();
     }
@@ -53,6 +55,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
 
         jMenuItem1.setText("Cadastrar Tutor");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem1);
 
         jMenuBar1.add(jMenu1);
@@ -60,6 +67,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenu2.setText("Animal");
 
         jMenuItem2.setText("Cadastrar Animal");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem2);
 
         jMenuBar1.add(jMenu2);
@@ -79,6 +91,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenu4.setText("Veterinário");
 
         jMenuItem4.setText("Cadastrar Veterinário");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
         jMenu4.add(jMenuItem4);
 
         jMenuBar1.add(jMenu4);
@@ -86,6 +103,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenu5.setText("Serviços");
 
         jMenuItem5.setText("Cadastrar Serviços");
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
         jMenu5.add(jMenuItem5);
 
         jMenuBar1.add(jMenu5);
@@ -113,12 +135,34 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        // TODO add your handling code here:
+        TelaCadastroConsulta tela = new TelaCadastroConsulta();
+        tela.setVisible(true);
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenu1ActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+      TelaCadastroTutor tela = new TelaCadastroTutor();
+      tela.setVisible(true);
+
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+        TelaCadastroServico tela = new TelaCadastroServico();
+        tela.setVisible(true);
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        TelaCadastroVeterinario tela = new TelaCadastroVeterinario();
+        tela.setVisible(true);
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        TelaCadastroAnimal tela = new TelaCadastroAnimal();
+        tela.setVisible(true);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
