@@ -1,24 +1,64 @@
 package com.mycompany.petmanagerdesktop.controller;
 
+import com.mycompany.petmanagermodelo.dao.ConsultaDAO;
+import com.mycompany.petmanagermodelo.dto.Consulta;
 import com.mycompany.petmanagerdesktop.visao.telacadastroconsulta.TelaCadastroConsulta;
 
 public class ConsultaController {
 
-    private TelaCadastroConsulta view;
+    private final TelaCadastroConsulta tela;
+    private int consultaIdAtual = -1;  // para guardar o meu ID (futura atualização)
 
-    public ConsultaController(TelaCadastroConsulta view) {
-        this.view = view;
+    public ConsultaController(TelaCadastroConsulta tela) {
+        this.tela = tela;
+    }
+
+    public void carregarConsultaParaEdicao(Consulta c) {
+        consultaIdAtual = c.getId();  // para guardar o meu ID (futura atualização) att/excluir 
+        tela.getTxtDataConsulta().setText(c.getData());
+        tela.getCbAnimal().setSelectedItem(c.getAnimal());
+        tela.getCbVeterinario().setSelectedItem(c.getVeterinario());
+        tela.getCbServico().setSelectedItem(c.getServico());
     }
 
     public void salvar() {
-        System.out.println("Salvar consulta...");
+        Consulta dto = new Consulta();
+        dto.setData(tela.getTxtDataConsulta().getText());
+        dto.setAnimal(tela.getCbAnimal().getSelectedItem().toString());
+        dto.setVeterinario(tela.getCbVeterinario().getSelectedItem().toString());
+        dto.setServico(tela.getCbServico().getSelectedItem().toString());
+
+        new ConsultaDAO().salvar(dto);
+
+        consultaIdAtual = -1; // reset após salvar
     }
 
     public void atualizar() {
-        System.out.println("Atualizar consulta...");
+        if (consultaIdAtual == -1) {
+            System.out.println("Nenhuma consulta selecionada para atualização.");
+            return;
+        }
+
+        Consulta dto = new Consulta();
+        dto.setId(consultaIdAtual);
+        dto.setData(tela.getTxtDataConsulta().getText());
+        dto.setAnimal(tela.getCbAnimal().getSelectedItem().toString());
+        dto.setVeterinario(tela.getCbVeterinario().getSelectedItem().toString());
+        dto.setServico(tela.getCbServico().getSelectedItem().toString());
+
+        new ConsultaDAO().atualizar(dto);
+
+        consultaIdAtual = -1; 
     }
 
     public void excluir() {
-        System.out.println("Excluir consulta...");
+        if (consultaIdAtual == -1) {
+            System.out.println("Nenhuma consulta selecionada para exclusão.");
+            return;
+        }
+
+        new ConsultaDAO().excluir(consultaIdAtual);
+
+        consultaIdAtual = -1;
     }
 }

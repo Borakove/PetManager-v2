@@ -21,6 +21,7 @@
             <groupId>com.mycompany</groupId>
             <artifactId>petmanagermodelo</artifactId>
             <version>1.0-SNAPSHOT</version>
+            <type>jar</type>
         </dependency>
         
         

@@ -1,27 +1,32 @@
 package com.mycompany.petmanagerdesktop.controller;
 
-import com.mycompany.petmanagerdesktop.controller.TutorController;
 import com.mycompany.petmanagerdesktop.visao.telacadastrotutor.TelaCadastroTutor;
+import com.mycompany.petmanagermodelo.dao.TutorDAO;
+import com.mycompany.petmanagermodelo.dto.Tutor;
 
 public class TutorController {
-
-    private TelaCadastroTutor view;
+    private final TelaCadastroTutor view;
 
     public TutorController(TelaCadastroTutor view) {
         this.view = view;
     }
 
-    public void salvar() {
-        // Aqui você pega os dados da view e salva
-        System.out.println("Salvar tutor...");
-        // Exemplo: String nome = view.getTxtNome().getText();
-    }
+    public void salvarTutor() throws Exception {
+  
+        String nome = view.getTxtNomeTutor().getText();
+        String telefone = view.getTxtTelefoneTutor().getText();
+        String email = view.getTxtEmailTutor().getText();
+        String endereco = view.getTxtEnderecoTutor().getText();
+        String cpf = view.getTxtCpfTutor().getText();
 
-    public void atualizar() {
-        System.out.println("Atualizar tutor...");
-    }
+        Tutor tutor = new Tutor();
+        tutor.setNome(nome);
+        tutor.setTelefone(telefone);
+        tutor.setEmail(email);
+        tutor.setEndereco(endereco);
+        tutor.setCpf(cpf);
 
-    public void excluir() {
-        System.out.println("Excluir tutor...");
+        TutorDAO tutorDAO = new TutorDAO();
+        tutorDAO.inserir(tutor);
     }
 }

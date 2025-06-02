@@ -11,6 +11,7 @@ import com.mycompany.petmanagerdesktop.controller.ConsultaController;
  */
 public class TelaCadastroConsulta extends javax.swing.JFrame {
     private ConsultaController controller;
+    public String getTxtIdConsulta;
 
     public TelaCadastroConsulta() {
         initComponents();
@@ -131,7 +132,7 @@ public class TelaCadastroConsulta extends javax.swing.JFrame {
                     .addComponent(jLabel4)
                     .addComponent(cbServico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(402, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap(465, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -161,7 +162,25 @@ public class TelaCadastroConsulta extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btnVoltarActionPerformed
 
-    /**
+
+
+    public javax.swing.JTextField getTxtDataConsulta() {
+        return txtDataConsulta;
+    }
+
+    public javax.swing.JComboBox<String> getCbAnimal() {
+        return cbAnimal;
+    }
+
+    public javax.swing.JComboBox<String> getCbVeterinario() {
+        return cbVeterinario;
+    }
+
+    public javax.swing.JComboBox<String> getCbServico() {
+        return cbServico;
+    }
+
+        /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
@@ -210,4 +229,5 @@ public class TelaCadastroConsulta extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JTextField txtDataConsulta;
     // End of variables declaration//GEN-END:variables
+
 }

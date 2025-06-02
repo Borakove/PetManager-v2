@@ -131,6 +131,14 @@ public class TelaCadastroVeterinario extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btnVoltarActionPerformed
 
+    public javax.swing.JTextField getTxtNomeVet() {
+        return txtNomeVet;
+}
+
+    public javax.swing.JTextField getTxtCRMV() {
+        return txtCRMV;
+}
+
     /**
      * @param args the command line arguments
      */

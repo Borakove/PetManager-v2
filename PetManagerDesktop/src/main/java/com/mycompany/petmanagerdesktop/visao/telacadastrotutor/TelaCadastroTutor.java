@@ -152,15 +152,18 @@ public class TelaCadastroTutor extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
-       controller.salvar();
+       initComponents();
+       controller = new TutorController(this);
     }//GEN-LAST:event_btnSalvarActionPerformed
 
     private void btnAtualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtualizarActionPerformed
-       controller.atualizar();
+       initComponents();
+       controller = new TutorController(this);
     }//GEN-LAST:event_btnAtualizarActionPerformed
 
     private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
-       controller.excluir();
+       initComponents();
+       controller = new TutorController(this);
     }//GEN-LAST:event_btnExcluirActionPerformed
 
     private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
@@ -201,6 +204,27 @@ public class TelaCadastroTutor extends javax.swing.JFrame {
             }
         });
     }
+    
+    public javax.swing.JTextField getTxtNomeTutor() {
+        return txtNomeTutor;
+    }
+
+    public javax.swing.JTextField getTxtTelefoneTutor() {
+        return txtTelefoneTutor;
+    }
+
+    public javax.swing.JTextField getTxtEmailTutor() {
+        return txtEmailTutor;
+    }
+
+    public javax.swing.JTextField getTxtEnderecoTutor() {
+        return txtEnderecoTutor;
+    }
+
+    public javax.swing.JTextField getTxtCpfTutor() {
+        return txtCpfTutor;
+    }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAtualizar;

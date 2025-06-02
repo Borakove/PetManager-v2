@@ -1,24 +1,38 @@
 package com.mycompany.petmanagerdesktop.controller;
 
+import com.mycompany.petmanagermodelo.dto.Servico;
+import com.mycompany.petmanagermodelo.dao.ServicoDAO;
 import com.mycompany.petmanagerdesktop.visao.telacadastroservico.TelaCadastroServico;
 
 public class ServicoController {
+    private final TelaCadastroServico tela;
+    private final ServicoDAO dao = new ServicoDAO();
 
-    private TelaCadastroServico view;
-
-    public ServicoController(TelaCadastroServico view) {
-        this.view = view;
+    public ServicoController(TelaCadastroServico tela) {
+        this.tela = tela;
     }
 
     public void salvar() {
-        System.out.println("Salvar serviço...");
-    }
+    Servico dto = new Servico();
+    dto.setDescricao(tela.getTxtNomeServico().getText());
+    dto.setPreco(Double.parseDouble(tela.getTxtPrecoServico().getText()));
+    new ServicoDAO().salvar(dto);
+}
 
-    public void atualizar() {
-        System.out.println("Atualizar serviço...");
-    }
+public void atualizar() {
+    Servico dto = new Servico();
+    dto.setDescricao(tela.getTxtNomeServico().getText());
+    dto.setPreco(Double.parseDouble(tela.getTxtPrecoServico().getText()));
+    new ServicoDAO().atualizar(dto);
+}
 
-    public void excluir() {
-        System.out.println("Excluir serviço...");
+public void excluir() {
+    tela.getTxtNomeServico().setText("");
+    tela.getTxtPrecoServico().setText("");
+}
+
+public void voltar() {
+    tela.dispose();
+    
     }
 }

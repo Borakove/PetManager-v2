@@ -133,6 +133,7 @@ public class TelaCadastroServico extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btnVoltarActionPerformed
 
+    
     /**
      * @param args the command line arguments
      */
@@ -167,6 +168,32 @@ public class TelaCadastroServico extends javax.swing.JFrame {
             }
         });
     }
+
+    public javax.swing.JButton getBtnSalvarServico() {
+        return btnSalvar;
+    }
+
+    public javax.swing.JButton getBtnVoltarServico() {
+        return btnVoltar;
+    }
+
+    public javax.swing.JButton getBtnExcluirServico() {
+        return btnExcluir;
+    }
+
+    public javax.swing.JButton getBtnAtualizarServico() {
+        return btnAtualizar;
+    }
+
+    public javax.swing.JTextField getTxtNomeServico() {
+        return txtNomeServico;
+    }
+
+    public javax.swing.JTextField getTxtPrecoServico() {
+        return txtPrecoServico;
+    }
+
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAtualizar;
