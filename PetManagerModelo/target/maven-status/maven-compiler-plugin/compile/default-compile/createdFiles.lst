@@ -1,14 +1,4 @@
-com\mycompany\petmanagermodelo\dao\ConsultaDAO.class
-com\mycompany\petmanagermodelo\dto\Consulta.class
-com\mycompany\petmanagermodel\dao\VeterinarioDAO.class
-com\mycompany\petmanagermodelo\dao\TutorDAO.class
-com\mycompany\petmanagermodel\model\Veterinario.class
-com\mycompany\petmanagermodelo\dao\Conexao.class
-com\mycompany\petmanagermodel\model\Servico.class
-com\mycompany\petmanagermodel\dao\ServicoDAO.class
-com\mycompany\petmanagermodelo\dto\Tutor.class
-com\mycompany\petmanagermodelo\dto\Animal.class
-com\mycompany\petmanagermodelo\PetManagerModelo.class
-com\mycompany\petmanagermodelo\dto\Usuario.class
+com\mycompany\petmanagermodelo\LoginModelo.class
+com\mycompany\petmanagermodelo\AnimalModelo.class
 com\mycompany\petmanagermodelo\dao\AnimalDAO.class
-com\mycompany\petmanagermodelo\dao\UsuarioDAO.class
+com\mycompany\petmanagermodelo\dto\Animal.class
