@@ -1,0 +1,39 @@
+# Maven
+target/
+pom.xml.tag
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+release-versions.properties
+.repository/
+.settings/
+.project
+.classpath
+.factorypath
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+nbproject/
+*.bak
+*.log
+
+# Logs
+*.log
+logs/
+
+# Binaries
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.rar
+*.7z
+
+# OS generated files
+.DS_Store
+Thumbs.db
