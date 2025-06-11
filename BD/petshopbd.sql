@@ -25,3 +25,9 @@ CREATE TABLE veterinarios (
     telefone VARCHAR(20),
     endereco VARCHAR(255)
 );
+
+CREATE TABLE servicos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    descricao VARCHAR(255) NOT NULL,
+    valor DOUBLE NOT NULL
+);

@@ -8,26 +8,26 @@ public class TelaPrincipal extends JFrame {
 
     private JMenuItem menuItemCadastrarAnimal;
     private JMenuItem menuItemConsultarAnimal;
-    private JMenuItem menuItemCadastrarServico;
-    private JMenuItem menuItemConsultarServico;
+    private JMenuItem menuItemCadastrarServico; 
+    private JMenuItem menuItemConsultarServico;   
     private JMenuItem menuItemCadastrarTutor;
     private JMenuItem menuItemConsultarTutor;
     private JMenuItem menuItemCadastrarVeterinario;
     private JMenuItem menuItemConsultarVeterinario;
-    private JMenuItem menuItemSair; //  sair/logout
+    private JMenuItem menuItemSair;
 
     public TelaPrincipal() {
         setTitle("PetManager - Menu Principal");
-        setSize(1000, 700); // aumenta o tamanho da janela principal
+        setSize(1000, 700);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
-        
+
         JMenuBar menuBar = new JMenuBar();
 
-        // menu cadastros
+        // Menu Cadastros
         JMenu menuCadastros = new JMenu("Cadastros");
         menuItemCadastrarAnimal = new JMenuItem("Cadastrar Animal");
-        menuItemCadastrarServico = new JMenuItem("Cadastrar Serviço");
+        menuItemCadastrarServico = new JMenuItem("Cadastrar Serviço"); // Criação do item
         menuItemCadastrarTutor = new JMenuItem("Cadastrar Tutor");
         menuItemCadastrarVeterinario = new JMenuItem("Cadastrar Veterinário");
 
@@ -37,20 +37,19 @@ public class TelaPrincipal extends JFrame {
         menuCadastros.add(menuItemCadastrarVeterinario);
         menuBar.add(menuCadastros);
 
-        // menu consultas
+        // Menu Consultas
         JMenu menuConsultas = new JMenu("Consultas");
         menuItemConsultarAnimal = new JMenuItem("Consultar Animal");
-        menuItemConsultarServico = new JMenuItem("Consultar Serviço");
+        menuItemConsultarServico = new JMenuItem("Consultar Serviço"); // Criação do item
         menuItemConsultarTutor = new JMenuItem("Consultar Tutor");
         menuItemConsultarVeterinario = new JMenuItem("Consultar Veterinário");
 
         menuConsultas.add(menuItemConsultarAnimal);
-        menuConsultas.add(menuItemConsultarServico);
+        menuConsultas.add(menuItemConsultarServico); 
         menuConsultas.add(menuItemConsultarTutor);
         menuConsultas.add(menuItemConsultarVeterinario);
         menuBar.add(menuConsultas);
 
-        // arq com opçao de sair
         JMenu menuArquivo = new JMenu("Arquivo");
         menuItemSair = new JMenuItem("Sair");
         menuArquivo.add(menuItemSair);
@@ -58,10 +57,9 @@ public class TelaPrincipal extends JFrame {
 
         setJMenuBar(menuBar);
 
-        // add um painel principal xom telas
         JPanel contentPanel = new JPanel();
         contentPanel.setLayout(new BorderLayout());
-        JLabel welcomeLabel = new JLabel("Bem-vindo ao PetManager!", SwingConstants.CENTER);
+        JLabel welcomeLabel = new JLabel("Bem-vindo ao PetManager! Escolha uma opção no menu.", SwingConstants.CENTER);
         contentPanel.add(welcomeLabel, BorderLayout.CENTER);
         add(contentPanel);
     }
